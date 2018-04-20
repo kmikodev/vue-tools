@@ -1,0 +1,25 @@
+<template>
+  <div class="<%= kebabName %>">
+   <p>
+      <%= name %> works!!
+   </p>
+  </div>
+</template>
+
+<script>
+export default {
+  name: '<%= camelName %>',
+      data () {
+      return {
+          title: '<%= name %>'
+      }
+  }
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this componentProperties only -->
+<style scoped>
+.<%= kebabName %> {
+  
+}
+</style>

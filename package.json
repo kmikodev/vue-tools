@@ -1,0 +1,49 @@
+{
+  "name": "vue-litle-gen",
+  "version": "0.0.4",
+  "description": "Litle vue tool utility",
+  "main": "index.js",
+  "scripts": {
+    "lint": "jshint **.js",
+    "build": "browserify index.js > vuelitlegen.min.js",
+    "prebuild": "echo 'comentado' # npm run test # also runs npm run pretest",
+    "test": "mocha test/",
+    "prepublish": "npm run build # also runs npm run prebuild",
+    "pretest": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kmikodev/vue-tools.git"
+  },
+  "bin": {
+    "vueLitleGen": "./index.js"
+  },
+  "keywords": [
+    "vue-tool",
+    "cli",
+    "tools",
+    "scafolding"
+  ],
+  "author": "Jaime Cardona Villegas <jcardonavillegas@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kmikodev/vue-tools/issues"
+  },
+  "homepage": "https://github.com/kmikodev/vue-tools#readme",
+  "dependencies": {
+    "chalk": "^2.4.0",
+    "clear": "^0.1.0",
+    "clui": "^0.3.6",
+    "configstore": "^3.1.2",
+    "ejs": "^2.5.9",
+    "figlet": "^1.2.0",
+    "inquirer": "^5.2.0",
+    "lodash": "^4.17.5",
+    "minimist": "^1.2.0"
+  },
+  "devDependencies": {
+    "browserify": "^16.2.0",
+    "jshint": "^2.9.5",
+    "mocha": "^5.1.1"
+  }
+}
